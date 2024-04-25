@@ -1,0 +1,49 @@
+.data-table-container {
+    background-color: rgba(203, 155, 155, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Apply blur effect */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Add padding to create gap between table and glassmorphism */
+    margin: auto; /* Center the container horizontally */
+    width: 80%; /* Set a fixed width for the container */
+    max-width: 90vw; /* Ensure that the container doesn't overflow the viewport */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1); /* Apply box-shadow for glassy effect */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Border with semi-transparent color */
+  }
+  
+
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px; /* Rounded borders for the table */
+    overflow: hidden; /* Ensure overflow content is hidden for rounded corners */
+  }
+  
+  .data-table th,
+  .data-table td {
+    border: 1px solid #ffffff; /* Border for table cells */
+    padding: 8px; /* Padding for table cells */
+  }
+  
+  .data-table th {
+    background-color: #1c8ff3; /* Background color for table header */
+    color: #ffffff; /* Font color for table header */
+  }
+  
+  .data-table td {
+    background-color: #ebe9e9
+  }
+
+  .clickable {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  .my-dialog .MuiPaper-root {
+    background-color: #ffffff; /* Example: change the background color */
+    color: #4a1616;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    border-color: black;
+    border-width: 2px;
+  }

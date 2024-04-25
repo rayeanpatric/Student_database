@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import AccountMenu from './AccountMenu'; // Import your AccountMenu component
-import logo from './logo.png'
+import CustomAppBar from './CustomAppBar.js';
 import './evarsity.css';
 import axios from 'axios';
 import jsPDF from 'jspdf';
@@ -32,7 +28,7 @@ function Evarsity() {
   }, []);
 
   useEffect(() => {
-    axios.get('http://localhost:8081/final_appl')
+    axios.get('http://localhost:8081/second')
       .then(response => {
         setData(response.data);
         setFilteredData(response.data); 
@@ -68,20 +64,10 @@ function Evarsity() {
     doc.save('table_data.pdf');
   };
   
-
   return (
       <div>
-      <AppBar position="fixed" >
-        <Toolbar sx={{ bgcolor:'#e2e2e2'}}>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <img src={logo} alt="Logo" style={{ height: '50px', position: 'relative',margin:'8px' }} /> 
-          </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center'}}>
-            <AccountMenu email={data?.email} />
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <div style={{ marginTop: '90px' }}>
+      <CustomAppBar email={data?.email} />
+      <div>
       <Box sx={{ display: 'flex', justifyContent: 'flex-end', padding: '10px' }}>
             <Button variant="contained" onClick={() => handleFilter('Hostellers')} sx={{ marginRight: '10px' }}>Hostellers</Button>
             <Button variant="contained" onClick={() => handleFilter('Day Scholars')} sx={{ marginRight: '10px' }}>Day Scholars</Button>

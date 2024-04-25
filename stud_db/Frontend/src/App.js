@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import LoginForm from './components/loginform';
 import Evarsity from './components/evarsity';
 import Profile from './components/Profile';
+import StudentInfo from './components/StudentInfo';
 
 const ProtectedRoute = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -39,6 +40,11 @@ const App = () => {
             <Profile />
           </ProtectedRoute>
         } />
+        <Route path="/StudentInfo" element={
+        <ProtectedRoute>
+          <StudentInfo />
+        </ProtectedRoute>    
+      } />
       </Routes>
     </Router>
   );
