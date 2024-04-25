@@ -35,8 +35,8 @@
 
   .clickable {
     cursor: pointer;
-    color: blue;
-    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    
   }
 
   .my-dialog .MuiPaper-root {
